@@ -1,0 +1,27 @@
+.EnTete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.EnTeteLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.EnTeteLinks a {
+    color: black;
+    text-decoration: none;
+}
+
+.EnTeteLinks a:hover {
+    text-decoration: underline;
+}
+
+.Description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

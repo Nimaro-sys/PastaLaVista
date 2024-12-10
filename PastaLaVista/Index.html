@@ -12,15 +12,15 @@
         <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100px" alt="logo">
     </div>
     <div class="header__links">
-        <a href="" class="header__link">Lien 1</a>
-        <a href="" class="header__link">Lien 2</a>
-        <a href="" class="header__link">Lien 3</a>
-        <a href="" class="header__link">Lien 4</a>
+        <a href="#accueil" class="header__link">Accueil</a>
+        <a href="#menu" class="header__link">Menu</a>
+        <a href="#Reserv" class="header__link">Réservation</a>
+        <a href="#contact" class="header__link">Contact</a>
     </div>
 </header>
 
 <body>
-    <div class="description">
+    <div class="description" id="accueil">
         <div class="description__text">
             <article>
                 Bienvenue chez Pasta La Vista, un restaurant italien où l'authenticité de la cuisine rencontre l'amour de la tradition. Nous vous invitons à découvrir une expérience culinaire unique, inspirée des recettes classiques et intemporelles d'Italie. À chaque bouchée, vous serez transporté au cœur des saveurs méditerranéennes, avec des pâtes faites maison, des sauces riches et des ingrédients frais soigneusement sélectionnés. Que vous soyez un amateur de cuisine italienne ou un aventurier des saveurs, notre menu varié saura satisfaire toutes vos envies. Dans une ambiance chaleureuse et conviviale, venez partager un moment de plaisir autour de plats savoureux, accompagnés des meilleurs vins italiens. Pasta La Vista est l'endroit idéal pour savourer la dolce vita, à chaque repas.
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="menu-pres">
+    <div class="menu-pres" id="Menu">
         <h1 class="menu-pres__title">Nos spécialités italiennes</h1>
     </div>
 
@@ -39,7 +39,7 @@
         <h3 class="menu-pres__subtitle">Vous aimez la cuisine italienne ? Vous êtes au bon endroit</h3>
     </div>
 
-    <div class="description">
+    <div class="menu-container">
         <div class="menu-content">
             <div class="menu-content__box">
                 <h4 class="menu-content__title">Pâtes</h4>
@@ -77,6 +77,7 @@
     <div class="menu-pres">
         <h2 class="menu-pres__title">En Images</h2>
     </div>
+
     <div class="image-menu-line">
         <div class="image-menu">
             <img class="image-menu__img" src="ImagesPLV/Pates.webp" alt="Pâtes">
@@ -100,7 +101,7 @@
         </div>
     </div>
 
-    <div class="reservation">
+    <div class="reservation" id="Reserv">
         <h2 class="reservation__title">Réservez votre table</h2>
         <form action="#" method="POST" class="reservation__form">
             <label for="name" class="reservation__label">Prénom et Nom :</label>
@@ -119,24 +120,23 @@
             <input type="number" id="guests" name="guests" required min="1" max="20" placeholder="Nombre de convives" class="reservation__input">
     
             <button type="submit" class="reservation__button">Réserver</button>
+            <p>Tout les champs doivent êtres remplis</p>
         </form>
     </div>
 
-    <footer class="footer">
+    <footer class="footer" id="Contact">
         <div class="footer__container">
             <div class="footer__logo">
                 <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100px" alt="Logo Pasta La Vista">
                 <br>
-            </div>
-            <div>
                 <h3>Adresse</h3>
-                <p>48, rue du placeholder <br>77 777 Ville Fictive</p>
+                <p>48, rue du placeholder <br> Ville Fictive</p>
             </div>
             <nav class="footer__nav">
-                <a href="#" class="footer__link">Accueil</a>
-                <a href="#" class="footer__link">Menu</a>
-                <a href="#" class="footer__link">Réservation</a>
-                <a href="#" class="footer__link">Contact</a>
+                <a href="#accueil" class="footer">Accueil</a>
+                <a href="#menu" class="footer">Menu</a>
+                <a href="#Reserv" class="footer">Réservation</a>
+                <a href="#contact" class="footer">Contact</a>
             </nav>
         </div>
         <div class="footer__info">

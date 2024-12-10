@@ -139,8 +139,8 @@
                 <a href="#contact" class="footer">Contact</a>
             </nav>
         <div class="footer">    
-            <input class="light-mode" type="button" value="🌙" onclick="DarkMode()" />
-            <input class="light-mode" type="button" value="☀️" onclick="LightMode()" />
+            <input class="light-mode" type="button" value="☀️" onclick="DarkMode()" />
+            <input class="light-mode" type="button" value="🌙" onclick="LightMode()" />
         </div>
         </div>
         <div class="footer__info">
@@ -154,13 +154,13 @@
         // JS pour la prochaine fois, ajouter le header et footer en antiquewhite en mode dark mode
         function DarkMode() {
             document.body.classList.replace('dark-mode', 'light-mode');
-            document.header.classList.replace('dark-mode', 'light-mode');
-            document.footer.classList.replace('dark-mode', 'light-mode');
+            //document.header.classList.replace('dark-mode', 'light-mode');
+            //document.footer.classList.replace('dark-mode', 'light-mode');
         }
         function LightMode() {
-            document.body.classList.replace('dark-mode', 'light-mode');
-            document.header.classList.replace('dark-mode', 'light-mode');
-            document.footer.classList.replace('dark-mode', 'light-mode');
+            document.body.classList.replace('light-mode', 'dark-mode');
+            //document.header.classList.replace('dark-mode', 'light-mode');
+            //document.footer.classList.replace('dark-mode', 'light-mode');
         }
     </script>
     

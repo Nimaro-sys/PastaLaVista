@@ -7,22 +7,144 @@
     <link rel="stylesheet" href="styles.css"> <!-- Ajoutez votre fichier CSS -->
 </head>
 
-<header>
-    <div class="EnTete">
-        <div class="EnTeteLogo">
-            <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100px" alt="logo">
-        </div>
-        <div class="EnTeteLinks">
-            <a href="">Lien 1</a>
-            <a href="">Lien 2</a>
-            <a href="">Lien 3</a>
-            <a href="">Lien 4</a>
-        </div>
+<header class="header">
+    <div class="header__logo">
+        <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100px" alt="logo">
+    </div>
+    <div class="header__links">
+        <a href="" class="header__link">Lien 1</a>
+        <a href="" class="header__link">Lien 2</a>
+        <a href="" class="header__link">Lien 3</a>
+        <a href="" class="header__link">Lien 4</a>
     </div>
 </header>
 
 <body>
-    <div class="Description">
+    <div class="description">
+        <div class="description__text">
+            <article>
+                Bienvenue chez Pasta La Vista, un restaurant italien où l'authenticité de la cuisine rencontre l'amour de la tradition. Nous vous invitons à découvrir une expérience culinaire unique, inspirée des recettes classiques et intemporelles d'Italie. À chaque bouchée, vous serez transporté au cœur des saveurs méditerranéennes, avec des pâtes faites maison, des sauces riches et des ingrédients frais soigneusement sélectionnés. Que vous soyez un amateur de cuisine italienne ou un aventurier des saveurs, notre menu varié saura satisfaire toutes vos envies. Dans une ambiance chaleureuse et conviviale, venez partager un moment de plaisir autour de plats savoureux, accompagnés des meilleurs vins italiens. Pasta La Vista est l'endroit idéal pour savourer la dolce vita, à chaque repas.
+            </article>
+        </div>
+        <div class="description__image">
+            <img src="/PastaLaVista/ImagesPLV/Pasta front.webp" width="350" height="200" alt="plat de pâtes">
+        </div>
     </div>
+
+    <div class="menu-pres">
+        <h1 class="menu-pres__title">Nos spécialités italiennes</h1>
+    </div>
+
+    <div class="menu-pres">
+        <h3 class="menu-pres__subtitle">Vous aimez la cuisine italienne ? Vous êtes au bon endroit</h3>
+    </div>
+
+    <div class="description">
+        <div class="menu-content">
+            <div class="menu-content__box">
+                <h4 class="menu-content__title">Pâtes</h4>
+                <ul class="menu-content__list">
+                    <li class="menu-content__item">Spaghetti Bolognese</li>
+                    <li class="menu-content__item">Lasagne</li>
+                    <li class="menu-content__item">Penne Arrabbiata</li>
+                    <li class="menu-content__item">Raviolis maison</li>
+                    <li class="menu-content__item">Tagliatelles à la truffe</li>
+                </ul>
+            </div>
+            <div class="menu-content__box">
+                <h4 class="menu-content__title">Pizza</h4>
+                <ul class="menu-content__list">
+                    <li class="menu-content__item">Margherita</li>
+                    <li class="menu-content__item">Diavola</li>
+                    <li class="menu-content__item">Quattro Stagioni</li>
+                    <li class="menu-content__item">Capricciosa</li>
+                    <li class="menu-content__item">Pizza au Nutella</li>
+                </ul>
+            </div>
+            <div class="menu-content__box">
+                <h4 class="menu-content__title">Dessert</h4>
+                <ul class="menu-content__list">
+                    <li class="menu-content__item">Tiramisu</li>
+                    <li class="menu-content__item">Gelato</li>
+                    <li class="menu-content__item">Cannoli</li>
+                    <li class="menu-content__item">Profiteroles</li>
+                    <li class="menu-content__item">Pastiera</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-pres">
+        <h2 class="menu-pres__title">En Images</h2>
+    </div>
+
+    <div class="image-menu-line">
+        <div class="image-menu">
+            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/Pasta front.webp">
+        </div>
+        <div class="image-menu">
+            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/Pasta front.webp">
+        </div>
+        <div class="image-menu">
+            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/Pasta front.webp">
+        </div>
+    </div>
+    <div class="image-menu-line">
+        <div class="image-menu">
+            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/Pasta front.webp">
+        </div>
+        <div class="image-menu">
+            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/Pasta front.webp">
+        </div>
+        <div class="image-menu">
+            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/Pasta front.webp">
+        </div>
+    </div>
+
+    <div class="reservation">
+        <h2 class="reservation__title">Réservez votre table</h2>
+        <form action="#" method="POST" class="reservation__form">
+            <label for="name" class="reservation__label">Prénom et Nom :</label>
+            <input type="text" id="name" name="name" required placeholder="Votre prénom et nom" class="reservation__input">
+    
+            <label for="email" class="reservation__label">Email :</label>
+            <input type="email" id="email" name="email" required placeholder="Votre email" class="reservation__input">
+    
+            <label for="phone" class="reservation__label">Numéro de téléphone :</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Votre téléphone" pattern="[0-9]{10}" class="reservation__input">
+    
+            <label for="date" class="reservation__label">Date de réservation :</label>
+            <input type="date" id="date" name="date" required class="reservation__input">
+    
+            <label for="guests" class="reservation__label">Nombre de convives :</label>
+            <input type="number" id="guests" name="guests" required min="1" max="20" placeholder="Nombre de convives" class="reservation__input">
+    
+            <button type="submit" class="reservation__button">Réserver</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__logo">
+                <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100px" alt="Logo Pasta La Vista">
+                <br>
+            </div>
+            <div>
+                <h3>Adresse</h3>
+                <p>48, rue du placeholder <br>77 777 Ville Fictive</p>
+            </div>
+            <nav class="footer__nav">
+                <a href="#" class="footer__link">Accueil</a>
+                <a href="#" class="footer__link">Menu</a>
+                <a href="#" class="footer__link">Réservation</a>
+                <a href="#" class="footer__link">Contact</a>
+            </nav>
+        </div>
+        <div class="footer__info">
+            <p class="footer__text">© 2024 Pasta La Vista - Tous droits réservés.</p>
+            <p class="footer__text">Conçu avec amour par l'équipe Pasta La Vista.</p>
+        </div>
+    </footer>
+    
 </body>
 </html>

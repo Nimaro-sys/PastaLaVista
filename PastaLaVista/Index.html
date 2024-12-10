@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasta La Vista - Restaurant</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Ajoutez votre fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <header class="header">
@@ -12,16 +12,16 @@
         <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100px" alt="logo">
     </div>
     <div class="header__links">
-        <a href="" class="header__link">Lien 1</a>
-        <a href="" class="header__link">Lien 2</a>
-        <a href="" class="header__link">Lien 3</a>
-        <a href="" class="header__link">Lien 4</a>
+        <a href="#accueil" class="header__link">Accueil</a>
+        <a href="#menu" class="header__link">Menu</a>
+        <a href="#Reserv" class="header__link">Réservation</a>
+        <a href="#contact" class="header__link">Contact</a>
     </div>
 </header>
 
 <body>
     <div class="description">
-        <div class="description__text">
+        <div class="description__text" id="accueil">
             <article>
                 Bienvenue chez Pasta La Vista, un restaurant italien où l'authenticité de la cuisine rencontre l'amour de la tradition. Nous vous invitons à découvrir une expérience culinaire unique, inspirée des recettes classiques et intemporelles d'Italie. À chaque bouchée, vous serez transporté au cœur des saveurs méditerranéennes, avec des pâtes faites maison, des sauces riches et des ingrédients frais soigneusement sélectionnés. Que vous soyez un amateur de cuisine italienne ou un aventurier des saveurs, notre menu varié saura satisfaire toutes vos envies. Dans une ambiance chaleureuse et conviviale, venez partager un moment de plaisir autour de plats savoureux, accompagnés des meilleurs vins italiens. Pasta La Vista est l'endroit idéal pour savourer la dolce vita, à chaque repas.
             </article>
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="menu-pres">
+    <div class="menu-pres" id="menu">
         <h1 class="menu-pres__title">Nos spécialités italiennes</h1>
     </div>
 
@@ -39,10 +39,10 @@
         <h3 class="menu-pres__subtitle">Vous aimez la cuisine italienne ? Vous êtes au bon endroit</h3>
     </div>
 
-    <div class="description">
+    <div class="menu-container">
         <div class="menu-content">
             <div class="menu-content__box">
-                <h4 class="menu-content__title">Pâtes</h4>
+                <h4 class="menu-content__title">🍝Pâtes</h4>
                 <ul class="menu-content__list">
                     <li class="menu-content__item">Spaghetti Bolognese</li>
                     <li class="menu-content__item">Lasagne</li>
@@ -52,7 +52,7 @@
                 </ul>
             </div>
             <div class="menu-content__box">
-                <h4 class="menu-content__title">Pizza</h4>
+                <h4 class="menu-content__title">🍕Pizza</h4>
                 <ul class="menu-content__list">
                     <li class="menu-content__item">Margherita</li>
                     <li class="menu-content__item">Diavola</li>
@@ -62,7 +62,7 @@
                 </ul>
             </div>
             <div class="menu-content__box">
-                <h4 class="menu-content__title">Dessert</h4>
+                <h4 class="menu-content__title">🍦Dessert</h4>
                 <ul class="menu-content__list">
                     <li class="menu-content__item">Tiramisu</li>
                     <li class="menu-content__item">Gelato</li>
@@ -101,7 +101,7 @@
         </div>
     </div>
 
-    <div class="reservation">
+    <div class="reservation" id="Reserv">
         <h2 class="reservation__title">Réservez votre table</h2>
         <form action="#" method="POST" class="reservation__form">
             <label for="name" class="reservation__label">Prénom et Nom :</label>
@@ -123,7 +123,7 @@
         </form>
     </div>
 
-    <footer class="footer">
+    <footer class="footer" id="Contact">
         <div class="footer__container">
             <div class="footer__logo">
                 <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100px" alt="Logo Pasta La Vista">
@@ -134,13 +134,13 @@
                 <p>48, rue du placeholder <br>77 777 Ville Fictive</p>
             </div>
             <nav class="footer__nav">
-                <a href="#" class="footer__link">Accueil</a>
-                <a href="#" class="footer__link">Menu</a>
-                <a href="#" class="footer__link">Réservation</a>
-                <a href="#" class="footer__link">Contact</a>
+                <a href="#accueil" class="footer__link">Accueil</a>
+                <a href="#menu" class="footer__link">Menu</a>
+                <a href="#Reserv" class="footer__link">Réservation</a>
+                <a href="#contact" class="footer__link">Contact</a>
             </nav>
         </div>
-        <div class="footer__info">
+        <div class="footer__info" id="contact">
             <p class="footer__text">© 2024 Pasta La Vista - Tous droits réservés.</p>
             <p class="footer__text">Conçu avec amour par l'équipe Pasta La Vista.</p>
         </div>

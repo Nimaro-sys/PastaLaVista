@@ -130,4 +130,65 @@
     <footer class="light-footer" id="contact">
         <div class="footer__container">
             <div class="footer__logo">
-                <img src="/PastaLaVista/ImagesPLV
+                <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100px" alt="Logo Pasta La Vista">
+                <br>
+                <h3>Adresse</h3>
+                <p>48, rue du placeholder <br> Ville Fictive</p>
+            </div>
+            <nav class="footer__nav">
+                <a href="#accueil" class="footer">Accueil</a>
+                <a href="#menu" class="footer">Menu</a>
+                <a href="#Reserv" class="footer">Réservation</a>
+                <a href="#contact" class="footer">Contact</a>
+            </nav>
+        </div>
+        <div class="footer__info">
+            <p class="footer__text">© 2024 Pasta La Vista - Tous droits réservés.</p>
+            <p class="footer__text">Conçu avec amour par l'équipe Pasta La Vista.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        function DarkMode() {
+            document.body.classList.replace('dark-mode', 'light-mode');
+            document.header.classList.replace('light-header', 'dark-header');
+            document.footer.classList.replace('light-footer', 'dark-footer');
+        }
+
+        function LightMode() {
+            document.body.classList.replace('light-mode', 'dark-mode');
+            document.header.classList.replace('dark-header', 'light-header');
+            document.footer.classList.replace('dark-footer', 'light-footer');
+        }
+
+        function VerifInput() {
+            var nameField = document.getElementById("name");
+            var emailField = document.getElementById("email");
+            var phoneField = document.getElementById("phone");
+            var dateField = document.getElementById("date");
+            var guestsField = document.getElementById("guests");
+
+            if (nameField.value.trim().length < 3) {
+                alert("Votre prénom et nom doivent contenir au moins 3 lettres.");
+                return;
+            }
+
+            if (!nameField.value || !emailField.value || !phoneField.value || !dateField.value || !guestsField.value) {
+                alert("Tous les champs doivent être remplis.");
+                return;
+            }
+
+            var guests = parseInt(guestsField.value, 10);
+            if (isNaN(guests) || guests < 1 || guests > 20) {
+                alert("Veuillez entrer un nombre de convives valide entre 1 et 20.");
+                return;
+            }
+
+            alert("Votre réservation a été prise en compte !");
+        }
+
+    </script>
+    
+</body>
+</html> 

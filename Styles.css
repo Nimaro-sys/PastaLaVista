@@ -13,14 +13,14 @@ html {
     }
 }
 
-img:hover{
+img:hover {
     animation: scaleUp 0.3s ease forwards;
     cursor: pointer;
 }
 
 /* Header */
 
-body{
+body {
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -28,6 +28,7 @@ body{
     background-color: antiquewhite;
     color: black;
 }
+
 .dark-mode {
     background-color: #333;
     color: white;
@@ -119,7 +120,7 @@ body{
     padding: 20px;
 }
 
-.menu-content__box:hover{
+.menu-content__box:hover {
     cursor: pointer;
 }
 
@@ -222,15 +223,15 @@ body{
 .light-footer {
     margin-top: 25px;
     background-color: #333;
-    color: #fff;
+    color: black;
     padding: 20px;
     text-align: center;
 }
 
-.dark-footer{
+.dark-footer {
     margin-top: 25px;
     background-color: antiquewhite;
-    color: #fff;
+    color: white;
     padding: 20px;
     text-align: center;
 }

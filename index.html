@@ -12,8 +12,8 @@
             <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100" alt="logo">
         </div>
         <div class="footer">
-            <input class="light-mode" type="button" value="☀️" onclick="DarkMode()">
-            <input class="light-mode" type="button" value="🌃" onclick="LightMode()">
+            <input class="light-mode" type="button" value="🌙" onclick="DarkMode()">
+            <input class="light-mode" type="button" value="☀️" onclick="LightMode()">
         </div>
         <div class="header__links">
             <a href="#accueil" class="header__link">Accueil</a>
@@ -148,48 +148,45 @@
             <p class="footer__text">Conçu avec amour par l'équipe Pasta La Vista.</p>
         </div>
     </footer>
-
     <script>
-
         function DarkMode() {
-            document.body.classList.replace('dark-mode', 'light-mode');
-            document.header.classList.replace('header-light', 'header-dark');
-            document.footer.classList.replace('light-footer', 'dark-footer');
-        }
-
-        function LightMode() {
             document.body.classList.replace('light-mode', 'dark-mode');
-            document.header.classList.replace('header-dark', 'header-light');
-            document.footer.classList.replace('dark-footer', 'light-footer');
+            document.querySelector('.header-light').classList.replace('header-light', 'header-dark');
+            document.querySelector('.footer-light').classList.replace('light-footer', 'dark-footer');
         }
-
+        
+        function LightMode() {
+            document.body.classList.replace('dark-mode', 'light-mode');
+            document.querySelector('.header-dark').classList.replace('header-dark', 'header-light');
+            document.querySelector('.footer-dark').classList.replace('dark-footer', 'light-footer');
+        }
+        
         function VerifInput() {
             var nameField = document.getElementById("name");
             var emailField = document.getElementById("email");
             var phoneField = document.getElementById("phone");
             var dateField = document.getElementById("date");
             var guestsField = document.getElementById("guests");
-
+        
             if (nameField.value.trim().length < 3) {
                 alert("Votre prénom et nom doivent contenir au moins 3 lettres.");
                 return;
             }
-
+        
             if (!nameField.value || !emailField.value || !phoneField.value || !dateField.value || !guestsField.value) {
                 alert("Tous les champs doivent être remplis.");
                 return;
             }
-
+        
             var guests = parseInt(guestsField.value, 10);
             if (isNaN(guests) || guests < 1 || guests > 20) {
                 alert("Veuillez entrer un nombre de convives valide entre 1 et 20.");
                 return;
             }
-
+        
             alert("Votre réservation a été prise en compte !");
         }
-
-    </script>
+    </script>    
     
 </body>
 </html> 

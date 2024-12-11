@@ -123,7 +123,7 @@
             <label for="guests" class="reservation__label">Nombre de convives :</label>
             <input type="number" id="guests" name="guests" required min="1" max="20" placeholder="Nombre de convives" class="reservation__input">
     
-            <button type="submit" class="reservation__button">Réserver</button>
+            <button type="submit" class="reservation__button" onclick="VerifInput()">Réserver</button>
             <p>Tout les champs doivent êtres remplis</p>
         </form>
     </div>
@@ -157,10 +157,15 @@
             //document.header.classList.replace('dark-mode', 'light-mode');
             //document.footer.classList.replace('dark-mode', 'light-mode');
         }
+
         function LightMode() {
             document.body.classList.replace('light-mode', 'dark-mode');
             //document.header.classList.replace('dark-mode', 'light-mode');
             //document.footer.classList.replace('dark-mode', 'light-mode');
+        }
+
+        function VerifInput() {
+            alert("Bonjour monde")   
         }
     </script>
     

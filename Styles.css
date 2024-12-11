@@ -14,7 +14,8 @@ html {
 }
 
 img:hover{
-    animation: scaleUp 0.3s ease forwards;;
+    animation: scaleUp 0.3s ease forwards;
+    cursor: pointer;
 }
 
 /* Header */
@@ -107,6 +108,10 @@ body{
     width: 250px;
     margin: 10px;
     padding: 20px;
+}
+
+.menu-content__box:hover{
+    cursor: pointer;
 }
 
 .menu-content__title {

@@ -33,13 +33,22 @@ body{
     color: white;
 }
 
-.header {
+.header-light {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     margin-bottom: 25px;
     background-color: #333;
+}
+
+.header-dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 25px;
+    background-color: antiquewhite;
 }
 
 .header__links {

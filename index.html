@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./Styles.css">
 </head>
 <body class="light-mode">
-    <header class="header">
+    <header class="header-light">
         <div class="header__logo">
             <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100" alt="logo">
         </div>
@@ -153,13 +153,13 @@
 
         function DarkMode() {
             document.body.classList.replace('dark-mode', 'light-mode');
-            document.header.classList.replace('light-header', 'dark-header');
+            document.header.classList.replace('header-light', 'header-dark');
             document.footer.classList.replace('light-footer', 'dark-footer');
         }
 
         function LightMode() {
             document.body.classList.replace('light-mode', 'dark-mode');
-            document.header.classList.replace('dark-header', 'light-header');
+            document.header.classList.replace('header-dark', 'header-light');
             document.footer.classList.replace('dark-footer', 'light-footer');
         }
 

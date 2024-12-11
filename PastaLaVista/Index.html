@@ -165,7 +165,12 @@
         }
 
         function VerifInput() {
-            alert("Bonjour monde")   
+            var ResultatNom = document.getElementById(name)
+            var ResultatMail = document.getElementById(email)
+            if (ResultatNom.lenght < 3) {
+                alert("Votre nom et prénom doivent impérativement avoir plus de 3 lettres")
+                
+            }
         }
     </script>
     

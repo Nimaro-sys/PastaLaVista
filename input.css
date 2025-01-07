@@ -1,0 +1,186 @@
+/* input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+img:hover {
+    animation: scaleUp 0.3s ease forwards;
+    cursor: pointer;
+}
+
+/* Body */
+body {
+    @apply transition-colors duration-300;
+}
+
+/* Light and Dark Mode */
+.light-mode {
+    @apply bg-amber-50 text-black;
+}
+
+.dark-mode {
+    @apply bg-gray-900 text-white;
+}
+
+/* Header */
+.header-light, .header-dark {
+    @apply flex justify-between items-center p-4 mb-6;
+}
+
+.header-light {
+    @apply bg-gray-900;
+}
+
+.header-dark {
+    @apply bg-amber-50;
+}
+
+.header__links {
+    @apply flex gap-4;
+}
+
+.header__link {
+    @apply text-black px-5 py-2 bg-amber-50 rounded-lg border-3 border-black transition-all;
+}
+
+.header__link:hover {
+    @apply underline bg-amber-300;
+}
+
+/* Description Section */
+.description {
+    @apply flex justify-center items-center p-2 border-3 border-black;
+}
+
+.description__text {
+    @apply flex-1;
+}
+
+.description__image {
+    @apply flex-1;
+}
+
+/* Menu Presentation */
+.menu-pres {
+    @apply flex justify-center items-center;
+}
+
+/* Menu Content */
+.menu-container {
+    @apply flex justify-center items-center p-2;
+}
+
+.menu-content {
+    @apply flex justify-evenly w-full;
+}
+
+.menu-content__box {
+    @apply flex flex-col justify-center items-center border-3 border-black h-[250px] w-[250px] m-4 p-5 cursor-pointer;
+}
+
+.menu-content__title {
+    @apply mb-2;
+}
+
+.menu-content__list {
+    @apply list-inside flex flex-col justify-center;
+}
+
+.menu-content__item {
+    @apply mb-2 mx-4 whitespace-nowrap;
+}
+
+/* Image Menu */
+.image-menu-line {
+    @apply flex justify-center items-center gap-6 mb-6;
+}
+
+.image-menu {
+    @apply flex justify-center items-center flex-col gap-6;
+}
+
+.image-menu__img {
+    @apply w-[300px] h-[300px];
+}
+
+/* Reservation Form */
+.reservation {
+    @apply flex flex-col items-center mt-5;
+}
+
+.reservation__title {
+    @apply text-center text-2xl mb-5;
+}
+
+.reservation__form {
+    @apply flex flex-col gap-6 w-[500px] p-5 border-2 border-black rounded-lg bg-orange-400;
+}
+
+.reservation__label {
+    @apply font-bold text-sm;
+}
+
+.reservation__input {
+    @apply p-2 text-sm border-1 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none;
+}
+
+.reservation__button {
+    @apply p-3 bg-blue-500 text-white rounded-md cursor-pointer;
+}
+
+.reservation__button:hover {
+    @apply bg-blue-700;
+}
+
+/* Footer */
+.light-footer {
+    @apply mt-6 bg-gray-900 text-black p-5 text-center;
+}
+
+.dark-footer {
+    @apply mt-6 bg-amber-50 text-white p-5 text-center;
+}
+
+.footer__container {
+    @apply flex justify-between items-center flex-wrap max-w-screen-xl mx-auto;
+}
+
+.footer__logo img {
+    @apply max-w-[100px];
+}
+
+.footer__nav {
+    @apply flex gap-4;
+}
+
+.footer__link {
+    @apply text-white text-sm;
+}
+
+.footer__link:hover {
+    @apply underline text-amber-500;
+}
+
+.footer__info {
+    @apply mt-3 text-xs text-center;
+}
+
+.footer__text {
+    @apply my-1;
+}

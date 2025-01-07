@@ -4,150 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasta La Vista - Restaurant</title>
-    <link rel="stylesheet" href="./Styles.css">
+    <link rel="stylesheet" href="./output.css"> <!-- Assurez-vous que output.css est généré via Tailwind -->
 </head>
-<body class="light-mode">
-    <header class="header-light">
+<body class="bg-white text-gray-900 light-mode">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4 flex items-center justify-between">
         <div class="header__logo">
             <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100" alt="logo">
         </div>
-        <div class="footer">
-            <input class="light-mode" type="button" value="🌙" onclick="DarkMode()">
-            <input class="light-mode" type="button" value="☀️" onclick="LightMode()">
+        <div class="footer flex space-x-2">
+            <input class="light-mode" type="button" value="🌙" onclick="DarkMode()" class="p-2 text-xl cursor-pointer">
+            <input class="light-mode" type="button" value="☀️" onclick="LightMode()" class="p-2 text-xl cursor-pointer">
         </div>
-        <div class="header__links">
-            <a href="#accueil" class="header__link">Accueil</a>
-            <a href="#menu" class="header__link">Menu</a>
-            <a href="#Reserv" class="header__link">Réservation</a>
-            <a href="#contact" class="header__link">Contact</a>
+        <div class="header__links flex space-x-6">
+            <a href="#accueil" class="text-lg hover:text-blue-500">Accueil</a>
+            <a href="#menu" class="text-lg hover:text-blue-500">Menu</a>
+            <a href="#Reserv" class="text-lg hover:text-blue-500">Réservation</a>
+            <a href="#contact" class="text-lg hover:text-blue-500">Contact</a>
         </div>
     </header>
 
-    <div class="description" id="accueil">
-        <div class="description__text">
+    <!-- Description Section -->
+    <div class="description py-12 px-6 flex items-center space-x-12" id="accueil">
+        <div class="description__text flex-1">
             <article>
-                <h3>Benvenuti in Italia </h3>
-                Bienvenue chez Pasta La Vista, un restaurant italien où l'authenticité de la cuisine rencontre l'amour de la tradition. Nous vous invitons à découvrir une expérience culinaire unique, inspirée des recettes classiques et intemporelles d'Italie. À chaque bouchée, vous serez transporté au cœur des saveurs méditerranéennes, avec des pâtes faites maison, des sauces riches et des ingrédients frais soigneusement sélectionnés. Que vous soyez un amateur de cuisine italienne ou un aventurier des saveurs, notre menu varié saura satisfaire toutes vos envies. Dans une ambiance chaleureuse et conviviale, venez partager un moment de plaisir autour de plats savoureux, accompagnés des meilleurs vins italiens. Pasta La Vista est l'endroit idéal pour savourer la dolce vita, à chaque repas.
+                <h3 class="text-3xl font-semibold mb-4">Benvenuti in Italia</h3>
+                <p>Bienvenue chez Pasta La Vista, un restaurant italien où l'authenticité de la cuisine rencontre l'amour de la tradition...</p>
             </article>
         </div>
-        <div class="description__image">
+        <div class="description__image flex-1">
             <img src="/PastaLaVista/ImagesPLV/Pastafront.webp" width="350" height="200" alt="plat de pâtes">
         </div>
     </div>
 
+    <!-- Menu Section -->
     <div class="menu-pres" id="menu">
-        <h1 class="menu-pres__title">Nos spécialités italiennes</h1>
+        <h1 class="text-4xl font-semibold mb-8">Nos spécialités italiennes</h1>
     </div>
 
-    <div class="menu-pres">
-        <h3 class="menu-pres__subtitle">Vous aimez la cuisine italienne ? Vous êtes au bon endroit</h3>
+    <div class="menu-pres mb-8">
+        <h3 class="text-2xl font-medium">Vous aimez la cuisine italienne ? Vous êtes au bon endroit</h3>
     </div>
 
-    <div class="menu-container">
-        <div class="menu-content">
-            <div class="menu-content__box">
-                <h4 class="menu-content__title">Pâtes</h4>
-                <ul class="menu-content__list">
-                    <li class="menu-content__item">Spaghetti Bolognese</li>
-                    <li class="menu-content__item">Lasagne</li>
-                    <li class="menu-content__item">Penne Arrabbiata</li>
-                    <li class="menu-content__item">Raviolis maison</li>
-                    <li class="menu-content__item">Tagliatelles à la truffe</li>
-                </ul>
-            </div>
-            <div class="menu-content__box">
-                <h4 class="menu-content__title">Pizza</h4>
-                <ul class="menu-content__list">
-                    <li class="menu-content__item">Margherita</li>
-                    <li class="menu-content__item">Diavola</li>
-                    <li class="menu-content__item">Quattro Stagioni</li>
-                    <li class="menu-content__item">Capricciosa</li>
-                    <li class="menu-content__item">Pizza au Nutella</li>
-                </ul>
-            </div>
-            <div class="menu-content__box">
-                <h4 class="menu-content__title">Dessert</h4>
-                <ul class="menu-content__list">
-                    <li class="menu-content__item">Tiramisu</li>
-                    <li class="menu-content__item">Gelato</li>
-                    <li class="menu-content__item">Cannoli</li>
-                    <li class="menu-content__item">Profiteroles</li>
-                    <li class="menu-content__item">Pastiera</li>
-                </ul>
-            </div>
+    <div class="menu-container grid grid-cols-3 gap-6">
+        <div class="menu-content__box">
+            <h4 class="text-xl font-semibold mb-4">Pâtes</h4>
+            <ul class="list-disc pl-6">
+                <li>Spaghetti Bolognese</li>
+                <li>Lasagne</li>
+                <li>Penne Arrabbiata</li>
+                <li>Raviolis maison</li>
+                <li>Tagliatelles à la truffe</li>
+            </ul>
+        </div>
+        <div class="menu-content__box">
+            <h4 class="text-xl font-semibold mb-4">Pizza</h4>
+            <ul class="list-disc pl-6">
+                <li>Margherita</li>
+                <li>Diavola</li>
+                <li>Quattro Stagioni</li>
+                <li>Capricciosa</li>
+                <li>Pizza au Nutella</li>
+            </ul>
+        </div>
+        <div class="menu-content__box">
+            <h4 class="text-xl font-semibold mb-4">Dessert</h4>
+            <ul class="list-disc pl-6">
+                <li>Tiramisu</li>
+                <li>Gelato</li>
+                <li>Cannoli</li>
+                <li>Profiteroles</li>
+                <li>Pastiera</li>
+            </ul>
         </div>
     </div>
 
-    <div class="menu-pres">
-        <h2 class="menu-pres__title">En Images</h2>
+    <div class="menu-pres mb-8">
+        <h2 class="text-4xl font-semibold">En Images</h2>
     </div>
 
-    <div class="image-menu-line">
+    <div class="image-menu-line grid grid-cols-3 gap-6 mb-8">
         <div class="image-menu">
-            <img class="image-menu__img" src="ImagesPLV/Pates.webp" alt="Pâtes">
+            <img class="image-menu__img w-full h-auto" src="ImagesPLV/Pates.webp" alt="Pâtes">
         </div>
         <div class="image-menu">
-            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/PizzaDeLaMama.webp" alt="Pizza">
+            <img class="image-menu__img w-full h-auto" src="/PastaLaVista/ImagesPLV/PizzaDeLaMama.webp" alt="Pizza">
         </div>
         <div class="image-menu">
-            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/Fusili.webp" alt="Pâtes_2">
+            <img class="image-menu__img w-full h-auto" src="/PastaLaVista/ImagesPLV/Fusili.webp" alt="Pâtes_2">
         </div>
     </div>
-    <div class="image-menu-line">
+    <div class="image-menu-line grid grid-cols-3 gap-6">
         <div class="image-menu">
-            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/Desert1.webp" alt="Dessert">
+            <img class="image-menu__img w-full h-auto" src="/PastaLaVista/ImagesPLV/Desert1.webp" alt="Dessert">
         </div>
         <div class="image-menu">
-            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/PizzaDeLaMamama.webp" alt="Pizza">
+            <img class="image-menu__img w-full h-auto" src="/PastaLaVista/ImagesPLV/PizzaDeLaMamama.webp" alt="Pizza">
         </div>
         <div class="image-menu">
-            <img class="image-menu__img" src="/PastaLaVista/ImagesPLV/desert2.webp" alt="Dessert">
+            <img class="image-menu__img w-full h-auto" src="/PastaLaVista/ImagesPLV/desert2.webp" alt="Dessert">
         </div>
     </div>
 
-    <div class="reservation" id="Reserv">
-        <h2 class="reservation__title">Réservez votre table</h2>
-        <form action="#" method="POST" class="reservation__form">
-            <label for="name" class="reservation__label">Prénom et Nom :</label>
-            <input type="text" id="name" name="name" required placeholder="Votre prénom et nom" class="reservation__input">
-    
-            <label for="email" class="reservation__label">Email :</label>
-            <input type="email" id="email" name="email" required placeholder="Votre email" class="reservation__input">
-    
-            <label for="phone" class="reservation__label">Numéro de téléphone :</label>
-            <input type="text" id="phone" name="phone" required placeholder="Votre téléphone"  class="reservation__input">
-    
-            <label for="date" class="reservation__label">Date de réservation :</label>
-            <input type="date" id="date" name="date" required class="reservation__input">
-    
-            <label for="guests" class="reservation__label">Nombre de convives :</label>
-            <input type="number" id="guests" name="guests" required min="1" max="20" placeholder="Nombre de convives" class="reservation__input">
-    
-            <button type="submit" class="reservation__button" onclick="VerifInput()">Réserver</button>
-            <p>Tous les champs doivent être remplis</p>
+    <!-- Reservation Form -->
+    <div class="reservation py-12 px-6" id="Reserv">
+        <h2 class="text-4xl font-semibold mb-8">Réservez votre table</h2>
+        <form action="#" method="POST" class="space-y-6">
+            <label for="name" class="block font-medium">Prénom et Nom :</label>
+            <input type="text" id="name" name="name" required placeholder="Votre prénom et nom" class="w-full px-4 py-2 border border-gray-300 rounded-md">
+
+            <label for="email" class="block font-medium">Email :</label>
+            <input type="email" id="email" name="email" required placeholder="Votre email" class="w-full px-4 py-2 border border-gray-300 rounded-md">
+
+            <label for="phone" class="block font-medium">Numéro de téléphone :</label>
+            <input type="text" id="phone" name="phone" required placeholder="Votre téléphone"  class="w-full px-4 py-2 border border-gray-300 rounded-md">
+
+            <label for="date" class="block font-medium">Date de réservation :</label>
+            <input type="date" id="date" name="date" required class="w-full px-4 py-2 border border-gray-300 rounded-md">
+
+            <label for="guests" class="block font-medium">Nombre de convives :</label>
+            <input type="number" id="guests" name="guests" required min="1" max="20" placeholder="Nombre de convives" class="w-full px-4 py-2 border border-gray-300 rounded-md">
+
+            <button type="submit" class="w-full py-2 px-4 bg-blue-500 text-white rounded-md">Réserver</button>
+            <p class="text-center">Tous les champs doivent être remplis</p>
         </form>
     </div>
 
-    <footer class="light-footer" id="contact">
-        <div class="footer__container">
+    <!-- Footer -->
+    <footer class="bg-white p-8" id="contact">
+        <div class="footer__container flex justify-between">
             <div class="footer__logo">
                 <img src="/PastaLaVista/ImagesPLV/Logo.webp" width="100" alt="Logo Pasta La Vista">
-                <br>
-                <h3>Adresse</h3>
+                <h3 class="font-semibold mt-4">Adresse</h3>
                 <p>48, rue du placeholder <br> Ville Fictive</p>
             </div>
-            <nav class="footer__nav">
-                <a href="#accueil" class="footer">Accueil</a>
-                <a href="#menu" class="footer">Menu</a>
-                <a href="#Reserv" class="footer">Réservation</a>
-                <a href="#contact" class="footer">Contact</a>
+            <nav class="footer__nav space-x-6">
+                <a href="#accueil" class="text-lg hover:text-blue-500">Accueil</a>
+                <a href="#menu" class="text-lg hover:text-blue-500">Menu</a>
+                <a href="#Reserv" class="text-lg hover:text-blue-500">Réservation</a>
+                <a href="#contact" class="text-lg hover:text-blue-500">Contact</a>
             </nav>
         </div>
-        <div class="footer__info">
-            <p class="footer__text">© 2024 Pasta La Vista - Tous droits réservés.</p>
-            <p class="footer__text">Conçu avec amour par l'équipe Pasta La Vista.</p>
+        <div class="footer__info mt-8 text-center">
+            <p>© 2024 Pasta La Vista - Tous droits réservés.</p>
+            <p>Conçu avec amour par l'équipe Pasta La Vista.</p>
         </div>
     </footer>
+
     <script>
         function DarkMode() {
             document.body.classList.replace('light-mode', 'dark-mode');

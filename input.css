@@ -56,7 +56,7 @@ body {
 }
 
 .header__link {
-    @apply text-black px-5 py-2 bg-amber-50 rounded-lg border-3 border-black transition-all;
+    @apply text-black px-5 py-2 bg-amber-50 rounded-lg border border-black transition-all;
 }
 
 .header__link:hover {
@@ -65,7 +65,7 @@ body {
 
 /* Description Section */
 .description {
-    @apply flex justify-center items-center p-2 border-3 border-black;
+    @apply flex justify-center items-center p-2 border border-black;
 }
 
 .description__text {
@@ -91,7 +91,7 @@ body {
 }
 
 .menu-content__box {
-    @apply flex flex-col justify-center items-center border-3 border-black h-[250px] w-[250px] m-4 p-5 cursor-pointer;
+    @apply flex flex-col justify-center items-center border border-black h-[250px] w-[250px] m-4 p-5 cursor-pointer;
 }
 
 .menu-content__title {
@@ -137,7 +137,7 @@ body {
 }
 
 .reservation__input {
-    @apply p-2 text-sm border-1 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none;
+    @apply p-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none;
 }
 
 .reservation__button {

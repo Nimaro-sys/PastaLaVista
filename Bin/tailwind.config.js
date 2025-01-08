@@ -1,5 +1,7 @@
 // tailwind.config.js
 
+// Commande   .\tailwindcss -i ../input.css -o ./output.css
+
 module.exports = {
     content: [
       './**/*.html',  // Ajoutez ici les fichiers HTML
@@ -10,7 +12,6 @@ module.exports = {
     },
     plugins: [],
   };
-  // tailwind.config.js
 
 module.exports = {
     theme: {

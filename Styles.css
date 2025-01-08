@@ -1,3 +1,4 @@
+/* Global Styles */
 html {
     scroll-behavior: smooth;
 }
@@ -18,9 +19,11 @@ img:hover {
     cursor: pointer;
 }
 
-/* Header */
-
+/* Body Styles */
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -34,176 +37,155 @@ body {
     color: white;
 }
 
-.header-light {
+/* Header Styles */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    margin-bottom: 25px;
     background-color: #333;
+    color: white;
 }
 
-.header-dark {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 25px;
-    background-color: antiquewhite;
+.header__logo img {
+    width: 100px;
 }
 
-.header__links {
+.footer {
     display: flex;
     gap: 10px;
 }
 
-.header__link {
-    color: black;
-    text-decoration: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: antiquewhite;
-    border-radius: 15px;
-    border: #000 solid 3px;
-    transition: background-color 0.5s;
+.header__links {
+    display: flex;
+    gap: 15px;
 }
 
-.header__link:hover {
-    text-decoration: underline;
-    background-color: rgb(224, 195, 156);
+.header__links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header__links a:hover {
+    background-color: #f39c12;
 }
 
 /* Description Section */
 .description {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 20px;
     border: 3px solid black;
-    flex-direction: row;
+    margin-top: 20px;
 }
 
-/* Menu Presentation */
+.description__text h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.description__image img {
+    width: 350px;
+    height: auto;
+}
+
+/* Menu Section */
 .menu-pres {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    margin-top: 30px;
 }
-
-/* Menu Content */
 
 .menu-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 5px;
-    flex-direction: row;
-}
-
-.menu-content {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    margin: 20px;
+    flex-wrap: wrap;
 }
 
 .menu-content__box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid black;
-    height: 250px;
     width: 250px;
+    padding: 15px;
+    border: 2px solid #333;
+    text-align: center;
     margin: 10px;
-    padding: 20px;
 }
 
-.menu-content__box:hover {
-    cursor: pointer;
-}
-
-.menu-content__title {
-    margin-bottom: 10px;
+.menu-content__box h4 {
+    font-size: 20px;
+    color: #333;
 }
 
 .menu-content__list {
-    list-style-type: circle;
+    list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .menu-content__item {
-    margin: 5px 15px;
-    white-space: nowrap;
+    margin: 10px 0;
 }
 
 /* Image Menu */
 .image-menu-line {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
 }
 
-.image-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.image-menu__img {
-    height: 300px;
+.image-menu img {
     width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px;
 }
 
 /* Reservation Form */
-.reservation {
+.reservation__form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #333;
+    width: 60%;
+    max-width: 600px;
+    background-color: #f39c12;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
-.reservation__title {
-    text-align: center;
+.reservation__form h2 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.reservation__form {
+.reservation__container {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 15px;
-    width: 500px;
-    padding: 20px;
-    border: 2px solid #000;
-    border-radius: 8px;
-    background-color: orange;
 }
 
 .reservation__label {
-    font-weight: bold;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .reservation__input {
-    padding: 8px;
+    padding: 10px;
     font-size: 14px;
-    border-radius: 4px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .reservation__input:focus {
     border-color: #007BFF;
-    outline: none;
 }
 
 .reservation__button {
@@ -211,28 +193,25 @@ body {
     background-color: #007BFF;
     color: white;
     border: none;
-    cursor: pointer;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .reservation__button:hover {
     background-color: #0056b3;
 }
 
-/* Footer */
-.light-footer {
-    margin-top: 25px;
-    background-color: #333;
-    color: black;
-    padding: 20px;
-    text-align: center;
+.reservation__message {
+    font-size: 14px;
+    color: #333;
 }
 
-.dark-footer {
-    margin-top: 25px;
-    background-color: antiquewhite;
-    color: white;
+/* Footer Styles */
+footer {
+    margin-top: 30px;
     padding: 20px;
+    background-color: #333;
+    color: white;
     text-align: center;
 }
 
@@ -255,20 +234,18 @@ body {
 }
 
 .footer__link {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 14px;
 }
 
 .footer__link:hover {
     text-decoration: underline;
-    color: #f0a500;
+    color: #f39c12;
 }
 
 .footer__info {
-    margin-top: 15px;
     font-size: 12px;
-    text-align: center;
+    margin-top: 15px;
 }
 
 .footer__text {
